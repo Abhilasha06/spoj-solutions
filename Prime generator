@@ -1,0 +1,35 @@
+
+
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int t,re,cou;
+    cou=0;
+    cin>>t;
+    int st[t],en[t];
+    for(int i=0;i<t;i++){
+    cin>>st[i]>>en[i];
+    }
+    for(re=0;re<t;re++){
+        for(int x=st[re];x<=en[re];x++){
+        if(x==2||x==3)
+                    cou=1;
+            for(int j=2;j<=(x/2);++j){
+                
+                if(x%j==0){
+                    cou=0;
+                    break;
+                }
+                
+                else
+                cou=1;
+                }
+                if(cou==1)
+                    cout<<x<<endl;
+            }
+            cout<<endl;
+    }
+return 0;
+}
